@@ -1,0 +1,45 @@
+#addContainer{
+    width:80%;
+    height:80%;
+    z-index: 100000;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border:2px solid rgba(255, 255, 255, 0.986);
+    background-color: white;
+    box-shadow: 0px 3px 14px 0px rgba(0,0,0,0.75);
+}
+
+#close{
+    position: absolute;
+    right:0;
+}
+
+#addForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:50%;
+    margin:auto;
+    height:50%;
+    margin-top: 10%;
+}
+
+input,select{
+    font-size:1.2vw;
+}
+
+#submit{
+    border-radius: 10px;
+    font-size: 2vw;
+    color:#0099ff;
+    background-color: white;
+    border:2px solid black;
+    cursor:pointer;
+}
+
+#submit:hover{
+    background-color: #0099ff;
+    color:white;
+}
