@@ -44,8 +44,23 @@ const AddItem = (props) =>{
         }));
     }
 
-    let submitInventory = (e) =>{
+    let submitInventory = async (e) =>{
         e.preventDefault();
+        try{
+            await axios.post('http://localhost:5000/api/createItem',
+            {
+                Name:inputs.Name, 
+                Description:inputs.Description,
+                Count:inputs.Count,
+                Tags:inputs.tags,
+                newTags:inputs.newTags
+            })
+        }catch(e){
+            console.log(e);
+        }
+
+      
+
 
     }
 
