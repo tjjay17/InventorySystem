@@ -5,14 +5,15 @@ exports.create = (req, res) =>{
     let count = req.count;
 
     if(!name){
-        res.statusMessage("Null Item Name");
         res.status(400);
     }
 
     if(count < 1){
-        res.statusMessage("Invalid Item Quantity");
         res.status(400);
     }
+
+    //db insert
+    res.status(200);
 }
 
 exports.delete = (req, res) => {

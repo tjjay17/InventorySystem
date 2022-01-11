@@ -3,7 +3,7 @@
 #navbar{
     width:100%;
     height:10%;
-    background-color: #0099ff;
+    background-color: #E67E22;
     position:fixed;
     top:0;
     left:0;
@@ -22,7 +22,7 @@
     height:70%;
     border-radius: 10px;
     outline:none;
-    border:2px solid #ff9900;
+    border:2px solid white;
     background-color: transparent;
     color:white;
     font-size: 2vw;
@@ -30,8 +30,8 @@
 }
 
 #addBtn:hover{
-    border:2px solid #ff0037;
-    background-color:black;
+    background-color:white;
+    color:#E67E22;
 }
 
 
