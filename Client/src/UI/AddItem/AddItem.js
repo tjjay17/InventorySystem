@@ -15,7 +15,7 @@ const AddItem = (props) =>{
     const [inputs, updateInputs] = useState({
         Name:"",
         Description:"",
-        Count:0,
+        Count:"",
         tags:{},
         newTags:{}
     });
@@ -47,7 +47,7 @@ const AddItem = (props) =>{
     let submitInventory = async (e) =>{
         e.preventDefault();
         try{
-            await axios.post('http://localhost:5000/api/createItem',
+            await axios.post('http://localhost:5000/operations/createItem',
             {
                 Name:inputs.Name, 
                 Description:inputs.Description,
@@ -58,10 +58,6 @@ const AddItem = (props) =>{
         }catch(e){
             console.log(e);
         }
-
-      
-
-
     }
 
     return (
@@ -74,7 +70,6 @@ const AddItem = (props) =>{
             <form id = 'addForm'>
                 <input name = 'Name' placeholder = 'Name' onChange = {inputChange} value = {inputs.Name}/>
                 <input name = 'Count' placeholder = 'Count' type = 'number' onChange = {inputChange} value = {inputs.Count} />
-                <textarea name = 'Description' placeholder = 'Description' onChange = {inputChange} value = {inputs.Description}/>
                 <CreatableSelect isMulti placeholder = 'New Tags' onChange = {updateNewTags}/>
                 <Select 
                     isSearchable 
@@ -83,6 +78,7 @@ const AddItem = (props) =>{
                     placeholder = 'Existing Tags' 
                     onChange = {updateTags}
                 />
+                <textarea name = 'Description' placeholder = 'Description' onChange = {inputChange} value = {inputs.Description}/>
                 <button id = 'submit' type = 'submit' onClick = {submitInventory}>Add Inventory</button>
             </form>
         </div>

@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const opsController = require('./controllers/Operations');
 
-router.post('/api/operations/createItem', opsController.create);
-router.get('/api/operations/getallitems', opsController.getAllItems);
-router.delete('/api/operations/deleteItem',opsController.delete);
-router.put('/api/operations/updateItem', opsController.update);
+router.post('/operations/createItem', opsController.create);
+router.get('/operations/getallitems', opsController.getAllItems);
+router.delete('/operations/deleteItem',opsController.delete);
+router.put('/operations/updateItem', opsController.update);
 
 module.exports = router;
 

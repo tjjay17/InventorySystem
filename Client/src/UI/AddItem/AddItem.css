@@ -26,20 +26,20 @@
     margin-top: 10%;
 }
 
-input,select{
-    font-size:1.2vw;
+input{
+    font-size:2.5vw;
 }
 
 #submit{
     border-radius: 10px;
     font-size: 2vw;
-    color:#0099ff;
+    color:#E67E22;
     background-color: white;
     border:2px solid black;
     cursor:pointer;
 }
 
 #submit:hover{
-    background-color: #0099ff;
+    background-color: #E67E22;
     color:white;
 }
