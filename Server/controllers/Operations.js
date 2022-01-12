@@ -1,18 +1,13 @@
+const mongoose = require('mongoose');
+const InventoryItem = require('../models/InventoryItem');
+const Tag = require('../models/Tag');
+
 exports.create = (req, res) =>{
     let name = req.name;
     let tags = req.tags;
     let description = req.description;
     let count = req.count;
 
-    if(!name){
-        res.status(400);
-    }
-
-    if(count < 1){
-        res.status(400);
-    }
-
-    //db insert
     res.status(200);
 }
 
