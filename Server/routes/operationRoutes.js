@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const opsController = require('./controllers/Operations');
+const opsController = require('../controllers/Operations');
 
 router.post('/operations/createItem', opsController.create);
 router.get('/operations/getallitems', opsController.getAllItems);

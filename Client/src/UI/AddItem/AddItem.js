@@ -47,7 +47,7 @@ const AddItem = (props) =>{
     let submitInventory = async (e) =>{
         e.preventDefault();
         try{
-            await axios.post('http://localhost:5000/operations/createItem',
+            await axios.post('http://localhost:5000/api/operations/createItem',
             {
                 Name:inputs.Name, 
                 Description:inputs.Description,
