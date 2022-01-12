@@ -2,7 +2,6 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes/operationRoutes');
-const bsRoutes = require('./routes/bullshitRoutes');
 const dotenv = require('dotenv').config();
 const app = express();
 
