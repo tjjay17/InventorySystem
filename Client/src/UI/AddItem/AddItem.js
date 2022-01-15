@@ -12,6 +12,17 @@ const AddItem = (props) =>{
         {value:4, label:'Billy'}
     ]
 
+    const styles = {
+        control: base => ({
+          ...base,
+          fontFamily: "Times New Roman"
+        }),
+        menu: base => ({
+          ...base,
+          fontFamily: "Times New Roman"
+        })
+      };
+
     const [inputs, updateInputs] = useState({
         Name:"",
         Description:"",
@@ -61,22 +72,23 @@ const AddItem = (props) =>{
     }
 
     return (
-        <div id = 'addContainer'>
+        <div id = 'addContainer' className= {props.open ? 'animateAdd' : 'addBase'}>
             <div id = 'close'>
                 <strong>
                     <i style = {{cursor:'pointer'}} onClick = {props.btnHandler} className="large material-icons">close</i>
                 </strong>
             </div>
             <form id = 'addForm'>
-                <input name = 'Name' placeholder = 'Name' onChange = {inputChange} value = {inputs.Name}/>
-                <input name = 'Count' placeholder = 'Count' type = 'number' onChange = {inputChange} value = {inputs.Count} />
-                <CreatableSelect isMulti placeholder = 'New Tags' onChange = {updateNewTags}/>
+                <input required name = 'Name' placeholder = 'Name' onChange = {inputChange} value = {inputs.Name}/>
+                <input required name = 'Count' placeholder = 'Count' type = 'number' onChange = {inputChange} value = {inputs.Count} />
+                <CreatableSelect isMulti placeholder = 'New Tags' onChange = {updateNewTags} styles = {styles}/>
                 <Select 
                     isSearchable 
                     isMulti 
                     options = {options} 
                     placeholder = 'Existing Tags' 
                     onChange = {updateTags}
+                    styles = {styles}
                 />
                 <textarea name = 'Description' placeholder = 'Description' onChange = {inputChange} value = {inputs.Description}/>
                 <button id = 'submit' type = 'submit' onClick = {submitInventory}>Add Inventory</button>

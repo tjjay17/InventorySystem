@@ -14,8 +14,8 @@ function App() {
   return (
     <div className="App">
       <Navbar btnHandler = {addBtnHandler} />
-      {isOpen ? <PageDim  /> : null}
-      {isOpen ? <AddItem btnHandler = {addBtnHandler}/> : null}
+      {isOpen ? <PageDim btnHandler = {addBtnHandler} open = {isOpen}/> : null}
+      <AddItem btnHandler = {addBtnHandler} open = {isOpen}/>
     </div>
   );
 }

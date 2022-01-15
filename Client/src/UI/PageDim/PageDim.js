@@ -1,8 +1,8 @@
 import './PageDim.css';
 
-const PageDim = () =>{
+const PageDim = (props) =>{
     return (
-        <div id = 'dim'>
+        <div onClick={props.btnHandler} id = 'dim'>
 
         </div>
     )
